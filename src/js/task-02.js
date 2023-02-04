@@ -1,3 +1,4 @@
+
 const ingredients = [
   'Potatoes',
   'Mushrooms',
@@ -6,3 +7,14 @@ const ingredients = [
   'Herbs',
   'Condiments',
 ];
+
+const listOfIngredients = document.querySelector('#ingredients');
+
+const arrayOfIngredients = ingredients.map(element => {
+  const ingredient = document.createElement('li');
+  ingredient.textContent = element;
+  ingredient.classList.add('item');
+  return ingredient;
+})
+
+listOfIngredients.append(...arrayOfIngredients)

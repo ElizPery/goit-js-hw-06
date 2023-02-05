@@ -7,5 +7,8 @@ function checkLength(event) {
     if (inputSymbols.value.trim().length === Number(inputSymbols.dataset.length)) {
         inputSymbols.classList.remove('invalid')
         inputSymbols.classList.add('valid');
-    } else inputSymbols.classList.add('invalid');
+    } else {
+        inputSymbols.classList.remove('valid')
+        inputSymbols.classList.add('invalid');
+    };
 }
